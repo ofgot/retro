@@ -1,0 +1,542 @@
+
+/*
+---------------------------------------------
+font & reset css
+---------------------------------------------
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+
+
+/* Reset & Base Styles */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: #1e1e1e;
+    font-size: 16px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f99;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin: 0;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header, nav, section, article, aside, footer {
+    display: block;
+}
+
+/* Global Styles */
+html, body {
+    background: #1f2122;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-content {
+    margin-top: 110px;
+    background-color: #27292a;
+    padding: 60px;
+    border-radius: 23px;
+}
+
+p {
+    font-size: 15px;
+    color: #666;
+    line-height: 30px;
+    margin: 0;
+}
+
+::selection,
+::-moz-selection {
+    background: #e75e8d;
+    color: #fff;
+}
+
+.templatemo-item {
+    max-width: 80px;
+    border-radius: 23px;
+}
+
+/* Buttons */
+.main-button a,
+.main-border-button a {
+    font-size: 14px;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-button a {
+    background-color: #e75e8d;
+    color: #fff;
+}
+.main-button a:hover {
+    background-color: #fff;
+    color: #e75e8d;
+}
+
+.main-border-button a {
+    border: 1px solid #ec6090;
+    background-color: transparent;
+    color: #ec6090;
+}
+.main-border-button a:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #e75e8d;
+}
+
+.border-no-active a,
+.border-no-active a:hover {
+    border-color: #666;
+    color: #666;
+    background-color: transparent;
+}
+
+/* Sections */
+section {
+    margin-top: 120px;
+}
+
+.heading-section h4 {
+    font-size: 34px;
+    color: #ec6090;
+    margin-bottom: 30px;
+}
+
+.heading-section h4 em {
+    color: #fff;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+
+/*
+---------------------------------------------
+Pre-loader Style
+---------------------------------------------
+
+
+/* Убираем отступы и паддинги + box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общие настройки html и body */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #1e1e1e;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Основной контейнер (если используется) можно задать через .container или main */
+main {
+    flex: 1; /* Контент растягивается на всю доступную высоту */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ссылки */
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f99;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Параграфы */
+p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Списки */
+ul, ol {
+    list-style: none;
+}
+
+/* Изображения */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Базовые HTML5-блоки */
+header, nav, section, article, aside, footer {
+    display: block;
+}
+
+
+/*
+---------------------------------------------
+Header Style
+--------------------------------------------- 
+*/
+
+.header {
+    background-color: transparent;
+    position: absolute;
+    height: 70px;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    -webkit-transition: all .5s ease 0s;
+    -moz-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+.header .main-nav {
+    min-height: 80px;
+    background: transparent;
+    display: flex;
+    padding: 15px 0px;
+    border-radius: 50px;
+}
+
+.header .main-nav .logo {
+    border-right: 1px solid #27292a;
+    flex-basis: 25%;
+    margin-right: 5%;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.header .main-nav .logo img {
+    width: 191px;
+}
+
+.header .main-nav .nav {
+    display: inline-flex;
+    flex-basis: 70%;
+    justify-content: flex-end;
+    vertical-align: middle;
+    text-align: right;
+    margin-top: 0px;
+    margin-right: 0px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    z-index: 999;
+}
+
+.header .main-nav .nav li {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.header .main-nav .nav li a {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #666;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    border: transparent;
+    padding: 13px 10px;
+    border-radius: 18px;
+    letter-spacing: .3px;
+}
+
+.header .main-nav .nav li:hover a,
+.header .main-nav .nav li a.active {
+    color: #e75e8d !important;
+}
+
+.header .main-nav .menu-trigger span:before {
+    -moz-transform-origin: 33% 100%;
+    -ms-transform-origin: 33% 100%;
+    -webkit-transform-origin: 33% 100%;
+    transform-origin: 33% 100%;
+    top: -10px;
+    z-index: 10;
+}
+
+.header .main-nav .menu-trigger span:after {
+    -moz-transform-origin: 33% 0;
+    -ms-transform-origin: 33% 0;
+    -webkit-transform-origin: 33% 0;
+    transform-origin: 33% 0;
+    top: 10px;
+}
+
+
+@media (max-width: 1200px) {
+
+    .header .main-nav:before {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        top: 0;
+    }
+
+    .header .main-nav {
+        background-color: transparent;
+        border-radius: 0px;
+    }
+
+
+    .header .main-nav .logo {
+        position: absolute;
+        left: 30px;
+        top: 15px;
+    }
+
+    .header .main-nav .border-button {
+        position: absolute;
+        top: 15px;
+        right: 70px;
+    }
+
+    .header {
+        background-color: #f7f7f7;
+        padding: 0px 15px;
+        height: 80px;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .header .container {
+        padding: 0px;
+    }
+
+    .header .logo {
+        margin-left: 0px;
+    }
+
+    .header .menu-trigger {
+        display: block !important;
+    }
+
+    .header .main-nav {
+        overflow: hidden;
+    }
+}
+
+/* 
+---------------------------------------------
+Most Popular Style
+--------------------------------------------- 
+*/
+
+.most-popular {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #1f2122;
+    border-radius: 23px;
+}
+
+.most-popular .item {
+    background-color: #27292a;
+    padding: 30px 15px;
+    border-radius: 23px;
+    margin-bottom: 30px;
+}
+
+.most-popular .item .item {
+    padding: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+
+.most-popular .item img {
+    border-radius: 23px;
+}
+
+.most-popular .item h4 {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.most-popular .item span {
+    color: #666;
+    display: block;
+    margin-top: 7px;
+    font-weight: 400;
+}
+
+.most-popular .item ul {
+    float: right;
+    margin-top: 20px;
+}
+
+.most-popular .item ul li {
+    text-align: right;
+    color: #fff;
+    font-size: 14px;
+}
+
+.most-popular .main-button {
+    text-align: center;
+    margin-bottom: -53px;
+}
+
+/* 
+---------------------------------------------
+Gaming Library Style
+--------------------------------------------- 
+*/
+.gaming-library {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #1f2122;
+    border-radius: 23px;
+}
+
+.gaming-library .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #27292a;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.gaming-library .last-item {
+    margin-bottom: 30px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.gaming-library .item .game-cover {
+    width: 110px;
+    flex-shrink: 0;
+}
+
+.gaming-library .item .game-cover img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.gaming-library .item .game-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.gaming-library .item .game-info h4 {
+    font-size: 15px;
+    margin: 0;
+    color: #fff;
+}
+
+.gaming-library .item .game-info span {
+    color: #666;
+    font-size: 14px;
+}
+
+.gaming-library .item .game-status {
+    width: 100px;
+    text-align: right;
+    font-size: 14px;
+    color: #ec6090;
+}
+
+.gaming-library .main-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* 
+---------------------------------------------
+Footer Style
+--------------------------------------------- 
+*/
+
+footer p {
+    text-align: center;
+    padding: 30px 0px;
+    color: #fff;
+    font-weight: 300;
+}
+
+footer p a {
+    color: #fff;
+    transition: all .3s;
+}
+
+footer p a:hover {
+    color: #ec6090;
+}

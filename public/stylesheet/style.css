@@ -1,0 +1,264 @@
+/* ---------------------------------------------
+  1. Base / Reset
+--------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+    background: #1e1e1e;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f99;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+
+p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+::selection,
+::-moz-selection {
+    background: #e75e8d;
+    color: #fff;
+}
+
+header, nav, section, article, aside, footer {
+    display: block;
+}
+
+/* ---------------------------------------------
+  2. Layout
+--------------------------------------------- */
+.page-content {
+    margin-top: 110px;
+    background-color: #27292a;
+    padding: 60px;
+    border-radius: 23px;
+}
+
+section {
+    margin-top: 120px;
+}
+
+/* ---------------------------------------------
+  3. Typography
+--------------------------------------------- */
+.heading-section h4 {
+    font-size: 34px;
+    color: #ec6090;
+    margin-bottom: 30px;
+}
+
+.heading-section h4 em {
+    color: #fff;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------
+  4. Buttons
+--------------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 14px;
+    border-radius: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: #e75e8d;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: #e75e8d;
+}
+
+.btn-outline {
+    border: 1px solid #ec6090;
+    background: transparent;
+    color: #ec6090;
+}
+
+.btn-outline:hover {
+    border-color: #fff;
+    background: #fff;
+    color: #e75e8d;
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+    border-color: #666;
+    color: #666;
+    background: transparent;
+    cursor: default;
+}
+
+/* ---------------------------------------------
+  5. Header
+--------------------------------------------- */
+.header {
+    background-color: transparent;
+    position: absolute;
+    height: 70px;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    min-height: 80px;
+    background: transparent;
+    border-radius: 50px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav li a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    padding: 13px 10px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+.nav li a:hover,
+.nav li a.active {
+    color: #e75e8d;
+}
+
+.retro-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ---------------------------------------------
+  6. Components: Most Popular Cards
+--------------------------------------------- */
+.most-popular {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #1f2122;
+    border-radius: 23px;
+}
+
+.most-popular .item {
+    background-color: #27292a;
+    padding: 30px 15px;
+    border-radius: 23px;
+    margin-bottom: 30px;
+}
+
+.most-popular .item img {
+    border-radius: 23px;
+}
+
+.most-popular .item h4 {
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.most-popular .item span {
+    color: #666;
+    display: block;
+    margin-top: 7px;
+    font-weight: 400;
+}
+
+.most-popular .item ul {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.most-popular .item ul li {
+    color: #fff;
+    font-size: 14px;
+}
+
+.most-popular .item ul li:first-child i {
+    color: yellow;
+}
+
+.most-popular .item ul li:last-child i {
+    color: #ec6090;
+}
+
+/* ---------------------------------------------
+  7. Footer
+--------------------------------------------- */
+footer p {
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+    font-weight: 300;
+}
+
+footer p a {
+    color: #fff;
+    transition: all 0.3s;
+}
+
+footer p a:hover {
+    color: #ec6090;
+}
+
