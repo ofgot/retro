@@ -1,14 +1,7 @@
-
-/*
----------------------------------------------
-font & reset css
----------------------------------------------
-*/
+/*font*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
 
-
-/* Reset & Base Styles */
-
+/* ----------------------------------------- Reset & Base Styles ----------------------------------------- */
 *,
 *::before,
 *::after {
@@ -63,7 +56,7 @@ header, nav, section, article, aside, footer {
     display: block;
 }
 
-/* Global Styles */
+/* ----------------------------------------- Global Styles -------------------------------------------------- */
 html, body {
     background: #1f2122;
     font-family: 'Poppins', sans-serif;
@@ -94,7 +87,6 @@ p {
     border-radius: 23px;
 }
 
-/* Buttons */
 .main-button a,
 .main-border-button a {
     font-size: 14px;
@@ -113,6 +105,7 @@ p {
     background-color: #e75e8d;
     color: #fff;
 }
+
 .main-button a:hover {
     background-color: #fff;
     color: #e75e8d;
@@ -123,6 +116,7 @@ p {
     background-color: transparent;
     color: #ec6090;
 }
+
 .main-border-button a:hover {
     border-color: #fff;
     background-color: #fff;
@@ -136,7 +130,6 @@ p {
     background-color: transparent;
 }
 
-/* Sections */
 section {
     margin-top: 120px;
 }
@@ -153,70 +146,6 @@ section {
     text-decoration: underline;
 }
 
-
-/*
----------------------------------------------
-Pre-loader Style
----------------------------------------------
-
-
-/* Убираем отступы и паддинги + box-sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Общие настройки html и body */
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    background-color: #1e1e1e;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Основной контейнер (если используется) можно задать через .container или main */
-main {
-    flex: 1; /* Контент растягивается на всю доступную высоту */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Ссылки */
-a {
-    color: #ccc;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #f99;
-}
-
-/* Заголовки */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: #fff;
-}
-
-/* Параграфы */
-p {
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-/* Списки */
-ul, ol {
-    list-style: none;
-}
-
-/* Изображения */
 img {
     width: 100%;
     height: auto;
@@ -225,17 +154,7 @@ img {
     border-radius: 8px;
 }
 
-/* Базовые HTML5-блоки */
-header, nav, section, article, aside, footer {
-    display: block;
-}
-
-
-/*
----------------------------------------------
-Header Style
---------------------------------------------- 
-*/
+/* --------------------------------------------- Header Style --------------------------------------------- */
 
 .header {
     background-color: transparent;
@@ -259,20 +178,6 @@ Header Style
     border-radius: 50px;
 }
 
-.header .main-nav .logo {
-    border-right: 1px solid #27292a;
-    flex-basis: 25%;
-    margin-right: 5%;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-.header .main-nav .logo img {
-    width: 191px;
-}
-
 .header .main-nav .nav {
     display: inline-flex;
     flex-basis: 70%;
@@ -281,10 +186,6 @@ Header Style
     text-align: right;
     margin-top: 0px;
     margin-right: 0px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
     position: relative;
     z-index: 999;
 }
@@ -296,15 +197,11 @@ Header Style
 }
 
 .header .main-nav .nav li a {
-    display: block;
+    display: flex;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 105%;
     text-transform: capitalize;
     color: #666;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
     border: transparent;
     padding: 13px 10px;
     border-radius: 18px;
@@ -333,17 +230,59 @@ Header Style
     top: 10px;
 }
 
-
 @media (max-width: 1200px) {
 
     .header .main-nav:before {
         display: none;
     }
+
 }
+
+@media (max-width: 576px) {
+    .header {
+        top: 0;
+        display: flex;
+        align-content: center;
+        padding-left: 5%;
+    }
+
+    .header {
+        top: 0;
+        display: flex;
+        align-content: center;
+        padding-top: 2%;
+        padding-right: 2%;
+    }
+
+}
+@media (max-width: 408px) {
+    .header .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .header .main-nav .nav {
+        justify-content: center;
+    }
+
+    .header .main-nav .nav li a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}
+
 
 @media (max-width: 992px) {
     .header {
         top: 0;
+        display: flex;
+        align-content: center;
+        padding-top: 2%;
     }
 
     .header .main-nav {
@@ -352,36 +291,20 @@ Header Style
     }
 
 
-    .header .main-nav .logo {
-        position: absolute;
-        left: 30px;
-        top: 15px;
-    }
-
     .header .main-nav .border-button {
         position: absolute;
         top: 15px;
         right: 70px;
     }
 
-    .header {
-        background-color: #f7f7f7;
-        padding: 0px 15px;
-        height: 80px;
-        box-shadow: none;
-        text-align: center;
-    }
-
     .header .container {
         padding: 0px;
     }
 
-    .header .logo {
-        margin-left: 0px;
-    }
-
-    .header .menu-trigger {
-        display: block !important;
+    .retro-logo {
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
     }
 
     .header .main-nav {
@@ -389,141 +312,57 @@ Header Style
     }
 }
 
-/* 
----------------------------------------------
-Most Popular Style
---------------------------------------------- 
-*/
+/* ------------------------------------ Games ------------------------------------ */
 
-.most-popular {
-    margin-top: 60px;
+.games {
+    margin-top: 0px;
     padding: 30px;
     background-color: #1f2122;
     border-radius: 23px;
 }
 
-.most-popular .item {
+.games .item {
     background-color: #27292a;
     padding: 30px 15px;
     border-radius: 23px;
     margin-bottom: 30px;
 }
 
-.most-popular .item .item {
-    padding: 0px;
-    border-radius: 0px;
-    background-color: transparent;
-    margin-bottom: 0px;
-}
-
-.most-popular .item img {
+.games .item img {
     border-radius: 23px;
 }
 
-.most-popular .item h4 {
+.games .item h4 {
     font-size: 15px;
     margin-top: 20px;
     margin-bottom: 0px;
-    display: inline-block;
+    display: flex;
 }
 
-.most-popular .item span {
+.games .item span {
     color: #666;
     display: block;
     margin-top: 7px;
     font-weight: 400;
 }
 
-.most-popular .item ul {
+.games .item ul {
     float: right;
     margin-top: 20px;
 }
 
-.most-popular .item ul li {
+.games .item ul li {
     text-align: right;
     color: #fff;
     font-size: 14px;
 }
 
-.most-popular .main-button {
+.games .main-button {
     text-align: center;
     margin-bottom: -53px;
 }
 
-/* 
----------------------------------------------
-Gaming Library Style
---------------------------------------------- 
-*/
-.gaming-library {
-    margin-top: 60px;
-    padding: 30px;
-    background-color: #1f2122;
-    border-radius: 23px;
-}
-
-.gaming-library .item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #27292a;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    gap: 20px;
-}
-
-.gaming-library .last-item {
-    margin-bottom: 30px;
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.gaming-library .item .game-cover {
-    width: 110px;
-    flex-shrink: 0;
-}
-
-.gaming-library .item .game-cover img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.gaming-library .item .game-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.gaming-library .item .game-info h4 {
-    font-size: 15px;
-    margin: 0;
-    color: #fff;
-}
-
-.gaming-library .item .game-info span {
-    color: #666;
-    font-size: 14px;
-}
-
-.gaming-library .item .game-status {
-    width: 100px;
-    text-align: right;
-    font-size: 14px;
-    color: #ec6090;
-}
-
-.gaming-library .main-button {
-    text-align: center;
-    margin-top: 30px;
-}
-
-
-/* 
----------------------------------------------
-Footer Style
---------------------------------------------- 
-*/
+/* --------------------------------------------- Footer Style ---------------------------------------------  */
 
 footer p {
     text-align: center;

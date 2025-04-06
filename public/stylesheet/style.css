@@ -194,52 +194,52 @@ section {
 /* ---------------------------------------------
   6. Components: Most Popular Cards
 --------------------------------------------- */
-.most-popular {
+.games {
     margin-top: 60px;
     padding: 30px;
     background-color: #1f2122;
     border-radius: 23px;
 }
 
-.most-popular .item {
+.games .item {
     background-color: #27292a;
     padding: 30px 15px;
     border-radius: 23px;
     margin-bottom: 30px;
 }
 
-.most-popular .item img {
+.games .item img {
     border-radius: 23px;
 }
 
-.most-popular .item h4 {
+.games .item h4 {
     font-size: 15px;
     margin-top: 20px;
     display: inline-block;
 }
 
-.most-popular .item span {
+.games .item span {
     color: #666;
     display: block;
     margin-top: 7px;
     font-weight: 400;
 }
 
-.most-popular .item ul {
+.games .item ul {
     margin-top: 20px;
     text-align: right;
 }
 
-.most-popular .item ul li {
+.games .item ul li {
     color: #fff;
     font-size: 14px;
 }
 
-.most-popular .item ul li:first-child i {
+.games .item ul li:first-child i {
     color: yellow;
 }
 
-.most-popular .item ul li:last-child i {
+.games .item ul li:last-child i {
     color: #ec6090;
 }
 
