@@ -1,264 +1,233 @@
-/* ---------------------------------------------
-  1. Base / Reset
---------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
 html, body {
     height: 100%;
-    background: #1e1e1e;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
     display: flex;
     flex-direction: column;
+
+    background-color: white;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 8px;
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
 }
 
-ul, ol {
-    list-style: none;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    color: #4dbfbd;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: #4dbfbd;
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+h1, h4 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1, a {
+    text-shadow:
+            0 0 5px #4dbfbd,
+            0 0 10px #4dbfbd,
+            0 0 20px #4dbfbd,
+            0 0 40px #4dbfbd;
 }
 
 a {
-    color: #ccc;
     text-decoration: none;
-    transition: color 0.3s;
+    font-size: 1.4rem;
+
+    color: white;
+
 }
 
 a:hover {
-    color: #f99;
+    color: #4dbfbd;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    margin: 0;
-    color: #fff;
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 2rem;
 }
 
-p {
-    font-size: 15px;
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-right: 2rem;
 }
 
-::selection,
-::-moz-selection {
-    background: #e75e8d;
-    color: #fff;
+main {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: white;
+
+
 }
 
-header, nav, section, article, aside, footer {
-    display: block;
+.games {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    background-color: #cbece0;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+
+
 }
 
-/* ---------------------------------------------
-  2. Layout
---------------------------------------------- */
-.page-content {
-    margin-top: 110px;
-    background-color: #27292a;
-    padding: 60px;
-    border-radius: 23px;
+.item {
+    display: flex;
+    flex: 1 0 25rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 90%;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+
+    background-color: white;
+    color: #e0e0e0;
 }
 
-section {
-    margin-top: 120px;
+.item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #4dbfbd;
 }
 
-/* ---------------------------------------------
-  3. Typography
---------------------------------------------- */
-.heading-section h4 {
-    font-size: 34px;
-    color: #ec6090;
-    margin-bottom: 30px;
+.item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 1rem;
 }
 
-.heading-section h4 em {
-    color: #fff;
-    font-style: normal;
-    text-decoration: underline;
-}
-
-/* ---------------------------------------------
-  4. Buttons
---------------------------------------------- */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 14px;
-    border-radius: 25px;
-    font-weight: 400;
-    text-transform: capitalize;
-    letter-spacing: 0.5px;
-    transition: all 0.3s;
-    position: relative;
+.item-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
-.btn-primary {
-    background: #e75e8d;
-    color: #fff;
+.item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
-.btn-primary:hover {
-    background: #fff;
-    color: #e75e8d;
-}
-
-.btn-outline {
-    border: 1px solid #ec6090;
-    background: transparent;
-    color: #ec6090;
-}
-
-.btn-outline:hover {
-    border-color: #fff;
-    background: #fff;
-    color: #e75e8d;
-}
-
-.btn-disabled,
-.btn-disabled:hover {
-    border-color: #666;
-    color: #666;
-    background: transparent;
-    cursor: default;
-}
-
-/* ---------------------------------------------
-  5. Header
---------------------------------------------- */
-.header {
-    background-color: transparent;
-    position: absolute;
-    height: 70px;
-    top: 15px;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    transition: all 0.5s ease;
-}
-
-.main-nav {
+.last{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    background-color: #f3f3f3;
+    justify-content: center;
     align-items: center;
-    padding: 15px 0;
-    min-height: 80px;
-    background: transparent;
-    border-radius: 50px;
 }
 
-.nav {
-    display: flex;
-    gap: 20px;
+.last h4{
+    color: #4dbfbd;
 }
 
-.nav li a {
-    font-weight: 400;
-    font-size: 14px;
-    color: #666;
-    padding: 13px 10px;
-    border-radius: 18px;
-    transition: all 0.3s ease;
+@media (max-width: 425px) {
+    a {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+
+
+    .item{
+        flex: 1 0 18rem;
+    }
 }
 
-.nav li a:hover,
-.nav li a.active {
-    color: #e75e8d;
+@media (max-width: 345px) {
+    .menu {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .item{
+        flex: 1 0 14rem;
+    }
+}
+@media (max-width: 500px) {
+    h4{
+        font-size: 1.1rem;
+    }
+
 }
 
-.retro-logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
+@media (max-width: 999px) {
+    h4{
+        font-size: 1.3rem;
+    }
+
+    .item{
+        flex: 1 0 15rem;
+    }
 }
 
-/* ---------------------------------------------
-  6. Components: Most Popular Cards
---------------------------------------------- */
-.games {
-    margin-top: 60px;
-    padding: 30px;
-    background-color: #1f2122;
-    border-radius: 23px;
-}
+@media (min-width: 1000px) {
 
-.games .item {
-    background-color: #27292a;
-    padding: 30px 15px;
-    border-radius: 23px;
-    margin-bottom: 30px;
-}
+    h4 {
+        font-size: 1.3rem;
+    }
 
-.games .item img {
-    border-radius: 23px;
+    .item{
+        flex: 0 0 23rem;
+    }
 }
-
-.games .item h4 {
-    font-size: 15px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.games .item span {
-    color: #666;
-    display: block;
-    margin-top: 7px;
-    font-weight: 400;
-}
-
-.games .item ul {
-    margin-top: 20px;
-    text-align: right;
-}
-
-.games .item ul li {
-    color: #fff;
-    font-size: 14px;
-}
-
-.games .item ul li:first-child i {
-    color: yellow;
-}
-
-.games .item ul li:last-child i {
-    color: #ec6090;
-}
-
-/* ---------------------------------------------
-  7. Footer
---------------------------------------------- */
-footer p {
-    text-align: center;
-    padding: 30px 0;
-    color: #fff;
-    font-weight: 300;
-}
-
-footer p a {
-    color: #fff;
-    transition: all 0.3s;
-}
-
-footer p a:hover {
-    color: #ec6090;
-}
-
