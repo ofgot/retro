@@ -42,7 +42,7 @@ h1, h4 {
     font-family: 'Press Start 2P', cursive;
 }
 
-h1, a {
+h1, header a {
     text-shadow:
             0 0 5px #4dbfbd,
             0 0 10px #4dbfbd,
@@ -52,13 +52,18 @@ h1, a {
 
 a {
     text-decoration: none;
+}
+
+
+header a {
+    text-decoration: none;
     font-size: 1.4rem;
 
     color: white;
 
 }
 
-a:hover {
+header a:hover {
     color: #4dbfbd;
 }
 
@@ -159,7 +164,7 @@ main {
 .last{
     display: flex;
     flex-direction: row;
-    background-color: #f3f3f3;
+    background-color: white;
     justify-content: center;
     align-items: center;
 }
