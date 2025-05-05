@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script type="module" src="js/snake/main.js"></script>
 </head>
 <body>
 <div class="container">
@@ -23,21 +24,22 @@
     <!--MAIN-->
     <main>
         <section class="games">
-            <div class="game-card concrete-game">
+            <div class="concrete-game">
                 <div class="game-info">
-                    <h2>SPACE INVADERS</h2>
-                    <p>Defend Earth from alien invasion!</p>
+                    <h2>Snake</h2>
+                    <p>Eat eat eat</p>
                 </div>
 
                 <div class="game-canvas-container">
-                    <div class="score-display">SCORE: <span id="score">0</span></div>
+                    <!--                    <div class="score-display">SCORE: <span id="score">0</span></div>-->
                     <canvas id="gameCanvas" width="600" height="400"></canvas>
                 </div>
 
                 <div class="game-controls">
-                    <button class="control-btn" id="startBtn">START</button>
-                    <button class="control-btn" id="pauseBtn">PAUSE</button>
-                    <button class="control-btn" id="resetBtn">RESET</button>
+                    <div class="score">Score: <span id="score">0</span></div>
+                    <!--                    <button class="control-btn" id="startBtn">START</button>-->
+                    <!--                    <button class="control-btn" id="pauseBtn">PAUSE</button>-->
+                    <!--                    <button class="control-btn" id="resetBtn">RESET</button>-->
                 </div>
             </div>
         </section>
@@ -46,7 +48,7 @@
 
     <!--FOOTER-->
     <footer>
-
+        <p>&copy; 2025 Retro Games</p>
     </footer>
     <!--FOOTER-->
 </div>
