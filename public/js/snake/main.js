@@ -1,4 +1,4 @@
-import {drawFood, drawMap, drawSnake, setupCanvas} from "./render.js";
+import {drawFood, drawGrid, drawMap, drawSnake, setupCanvas} from "./render.js";
 import {map, tileSourcesGround} from "./field.js";
 import {Snake} from "./snake.js";
 import {Direction} from "./direction.js";
@@ -45,6 +45,7 @@ function gameLoop(timestamp) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     drawMap(ctx, map, tileMap);
+    drawGrid(ctx, ctx.canvas.width, ctx.canvas.height, TILE_SIZE);
     drawFood(ctx, food, foodImage);
     drawSnake(ctx, snake, TILE_SIZE);
     requestAnimationFrame(gameLoop);
@@ -54,7 +55,8 @@ requestAnimationFrame(gameLoop);
 
 
 document.addEventListener('keydown', (e) => {
-    console.log("Pressed: ", e.key)
+
+
     switch (e.key) {
       case 'w':
         snake.setDirection(Direction.UP);

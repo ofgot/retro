@@ -38,3 +38,24 @@ export function drawMap(ctx, map, tileImages) {
         }
     }
 }
+
+export function drawGrid(ctx, width, height, tileSize, color = 'rgba(0, 0, 0, 0.2)', lineWidth = 1) {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lineWidth;
+
+    // Рисуем вертикальные линии
+    for (let x = 0; x <= width; x += tileSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+    }
+
+    // Рисуем горизонтальные линии
+    for (let y = 0; y <= height; y += tileSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+    }
+}
