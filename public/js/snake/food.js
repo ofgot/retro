@@ -1,10 +1,16 @@
+export const tileSourcesFood = [
+    { src: 'img/snake/food/tile0336.png'},
+    { src: 'img/snake/food/tile0337.png'},
+    { src: 'img/snake/food/tile0338.png'},
+];
 
 export class Food {
     constructor(canvasWidth, canvasHeight, tileSize) {
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight;
         this.tileSize = tileSize;
-        this.position = this.generatePosition();
+
+        this.respawn();
     }
 
     generatePosition() {
@@ -13,5 +19,9 @@ export class Food {
         const x = Math.floor(Math.random() * cols);
         const y = Math.floor(Math.random() * rows);
         return { x, y };
+    }
+
+    respawn() {
+        this.position = this.generatePosition();
     }
 }

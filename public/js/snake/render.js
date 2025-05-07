@@ -5,6 +5,16 @@ export function setupCanvas() {
     return canvas.getContext('2d');
 }
 
+export function drawFood(ctx, food, imageFood) {
+    ctx.drawImage(
+        imageFood,
+        food.position.x * food.tileSize,
+        food.position.y * food.tileSize,
+        food.tileSize,
+        food.tileSize
+    );
+}
+
 export function drawSnake(ctx, snake, tileSize) {
     ctx.fillStyle = '#F6733A';
     for (let segment of snake.coords) {
