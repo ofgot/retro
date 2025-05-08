@@ -1,23 +1,26 @@
 import {drawFood, drawGrid, drawMap, drawSnake, setupCanvas} from "./render.js";
-import {map, tileSourcesGround} from "./field.js";
+import {map} from "./field.js";
 import {Snake} from "./snake.js";
 import {Direction} from "./direction.js";
 import {checkWallCollision, isFoodEaten} from "./collision.js";
-import {Food, tileSourcesFood} from "./food.js";
+import {Food} from "./food.js";
 import {loadTiles} from "./manager.js";
+import {tileSourcesFood, tileSourcesGround, tileSourcesHead} from "./images.js";
 
 const ctx = setupCanvas();
 
-export const TILE_SIZE = 32;
+export const TILE_SIZE = 48;
 
 const tileMap = [];
 const tileFood = [];
+const tileHead = [];
 
 const food = new Food(ctx.canvas.width, ctx.canvas.height, TILE_SIZE, tileFood);
 const snake = new Snake();
 
 await loadTiles(tileMap, tileSourcesGround);
 await loadTiles(tileFood, tileSourcesFood);
+await loadTiles(tileHead, tileSourcesHead);
 
 let lastTime = performance.now();
 let isStopped = false;
@@ -31,6 +34,12 @@ function gameLoop(timestamp) {
 
     if (!isStopped) {
         snake.move(deltaTime);
+    }
+
+    if (isStopped){
+        for (let i = 1; i < snake.coords.length; i++) {
+            console.log(snake.coords[i]);
+        }
     }
 
     if (isFoodEaten(snake.coords[0], food, TILE_SIZE)) {
@@ -47,7 +56,7 @@ function gameLoop(timestamp) {
     drawMap(ctx, map, tileMap);
     drawGrid(ctx, ctx.canvas.width, ctx.canvas.height, TILE_SIZE);
     drawFood(ctx, food, foodImage);
-    drawSnake(ctx, snake, TILE_SIZE);
+    drawSnake(ctx, snake,TILE_SIZE, tileHead[0]);
     requestAnimationFrame(gameLoop);
 }
 
@@ -55,8 +64,6 @@ requestAnimationFrame(gameLoop);
 
 
 document.addEventListener('keydown', (e) => {
-
-
     switch (e.key) {
       case 'w':
         snake.setDirection(Direction.UP);

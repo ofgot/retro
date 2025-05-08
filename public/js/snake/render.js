@@ -15,16 +15,14 @@ export function drawFood(ctx, food, imageFood) {
     );
 }
 
+// export function drawSnake(ctx, snake, tileSize, headImage) {
+//     ctx.drawImage(headImage, snake.coords[0].x * tileSize, snake.coords[0].y * tileSize, tileSize, tileSize);
+// }
+
 export function drawSnake(ctx, snake, tileSize) {
     ctx.fillStyle = '#F6733A';
-    for (let segment of snake.coords) {
-        ctx.fillRect(
-            segment.x * tileSize,
-            segment.y * tileSize,
-            tileSize,
-            tileSize
-        );
-    }
+    ctx.fillRect(snake.coords[0].x * tileSize, snake.coords[0].y * tileSize, tileSize, tileSize);
+
 }
 
 export function drawMap(ctx, map, tileImages) {
@@ -43,7 +41,6 @@ export function drawGrid(ctx, width, height, tileSize, color = 'rgba(0, 0, 0, 0.
     ctx.strokeStyle = color;
     ctx.lineWidth = lineWidth;
 
-    // Рисуем вертикальные линии
     for (let x = 0; x <= width; x += tileSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -51,7 +48,6 @@ export function drawGrid(ctx, width, height, tileSize, color = 'rgba(0, 0, 0, 0.
         ctx.stroke();
     }
 
-    // Рисуем горизонтальные линии
     for (let y = 0; y <= height; y += tileSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);

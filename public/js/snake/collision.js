@@ -7,7 +7,7 @@ export function checkWallCollision(head, width, height, tileSize) {
   );
 
   const headRect = new Rectangle(
-    new Coord(head.x * tileSize, head.y * tileSize),
+    new Coord(head.x * tileSize + 2, head.y * tileSize + 2),
     new Coord((head.x + 1) * tileSize, (head.y + 1) * tileSize),
   );
 
@@ -74,9 +74,10 @@ export function doRectanglesCollide(rect1, rect2) {
 /**
  * Checks if snake ate food.
  *
- * @param {Rectangle} rect1
- * @param {Rectangle} rect2
  * @returns {boolean} True if the rectangles collide, false otherwise.
+ * @param snakeHead
+ * @param food
+ * @param tileSize
  */
 export function isFoodEaten(snakeHead, food, tileSize) {
   const headRect = new Rectangle(
@@ -85,8 +86,8 @@ export function isFoodEaten(snakeHead, food, tileSize) {
   );
 
   const foodRect = new Rectangle(
-      new Coord(food.position.x * tileSize, food.position.y * tileSize),
-      new Coord((food.position.x + 1) * tileSize, (food.position.y + 1) * tileSize)
+      new Coord(food.position.x * tileSize + 2, food.position.y * tileSize + 2),
+      new Coord((food.position.x + 1) * tileSize - 2, (food.position.y + 1) * tileSize - 2)
   );
 
   return doRectanglesCollide(headRect, foodRect);

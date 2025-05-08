@@ -1,9 +1,3 @@
-export const tileSourcesFood = [
-    { src: 'img/snake/food/tile0336.png'},
-    { src: 'img/snake/food/tile0337.png'},
-    { src: 'img/snake/food/tile0338.png'},
-];
-
 export class Food {
     constructor(canvasWidth, canvasHeight, tileSize) {
         this.canvasWidth = canvasWidth;
