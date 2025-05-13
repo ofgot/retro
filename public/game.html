@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div class="container">
@@ -20,26 +21,60 @@
     </header>
     <!--HEADER-->
 
+    <!--    AUDIO    -->
+    <audio id="tetris-music" src="audio/tetris_music.mp3" loop></audio>
+
+    <!--    AUDIO    -->
+
     <!--MAIN-->
     <main>
         <section class="games">
             <div class="concrete-game">
                 <div class="game-info">
-                    <h2>Snake</h2>
-                    <p>Eat eat eat</p>
+                    <h2>Tetris</h2>
+                    <p>Brick as much blocks as you can</p>
                 </div>
 
-                <div class="game-canvas-container">
-                    <!--                    <div class="score-display">SCORE: <span id="score">0</span></div>-->
-                    <canvas id="gameCanvas" width="624" height="432"></canvas>
+                <div class="full-game">
+                    <div class="game-canvas-container">
+                        <!--                    <div class="score-display">SCORE: <span id="score">0</span></div>-->
+                        <canvas id="gameCanvas" width="240" height="440"></canvas>
+                    </div>
+
+                    <div class="game-canvas-container">
+                        <div class="next-block">Next block: </div>
+                        <canvas id="next-canvas" width="100" height="80"></canvas>
+
+                        <div class="level">Level: <span id="level">1</span></div>
+                        <div class="score">Score: <span id="score">0</span></div>
+                        <div class="lines">Lines: <span id="lines">0</span></div>
+
+                        <div class="buttons">
+                            <div class="two">
+                                <button id="restart">Restart</button>
+                                <button id="pause">Pause</button>
+                            </div>
+                            <button id="music">Music</button>
+                        </div>
+
+                        <div class="game-instructions">
+                            <h3>Controls: </h3>
+                            <h6>W – Rotate </h6>
+                            <h6>A – Move Left </h6>
+                            <h6>D – Move Right </h6>
+                            <h6>S – Drop Faster </h6>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="game-controls">
-                    <div class="score">Score: <span id="score">0</span></div>
+<!--                    <div class="score">Score: <span id="score">0</span></div>-->
                     <!--                    <button class="control-btn" id="startBtn">START</button>-->
                     <!--                    <button class="control-btn" id="pauseBtn">PAUSE</button>-->
                     <!--                    <button class="control-btn" id="resetBtn">RESET</button>-->
                 </div>
+
             </div>
         </section>
     </main>
@@ -51,6 +86,6 @@
     </footer>
     <!--FOOTER-->
 </div>
-<script type="module" src="js/snake/main.js"></script>
+<script type="module" src="js/tetris/main.js"></script>
 </body>
 </html>
