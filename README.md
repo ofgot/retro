@@ -4,6 +4,25 @@ Retro Games is a web-based collection of retro-style games inspired by classics 
 The core of the project is a fully functional Tetris game built from scratch using HTML5 Canvas. Users can play the game directly in the browser, control it with the keyboard, toggle music, pause/resume gameplay, and enjoy a responsive layout across devices. The project also supports offline play using Service Workers and features modern JavaScript architecture including OOP with prototypes, module structure, and jQuery interaction.
 
 Planned features include additional games like Snake, Gorillas, and Pac-Man.
+
+## 🚀 Running the Project
+
+### 🐍 Use Python's Built-in HTTP Server
+
+```bash
+cd retro/public
+python3 -m http.server 8000
+```
+
+<h2>🎮 Screenshots</h2>
+
+### 🏁 Main Menu
+<img src="https://github.com/user-attachments/assets/6d79ce21-8209-490d-a56d-7d3b7f2e6431" />
+
+### 🧱 Tetris Gameplay  
+<img src="https://github.com/user-attachments/assets/224fb350-8524-45bb-bd54-82df935db537" />
+
+
 <h2>📦 Technologies Used</h2>
 
 - 🔧 HTML5
@@ -23,23 +42,6 @@ Planned features include additional games like Snake, Gorillas, and Pac-Man.
   - Dynamic script loading
   - History API
   
-<h2>🎮 Screenshots</h2>
-
-### 🏁 Main Menu
-<img src="https://github.com/user-attachments/assets/6d79ce21-8209-490d-a56d-7d3b7f2e6431" />
-
-### 🧱 Tetris Gameplay  
-<img src="https://github.com/user-attachments/assets/224fb350-8524-45bb-bd54-82df935db537" />
-
-## 🚀 Running the Project
-
-### 🐍 Use Python's Built-in HTTP Server
-
-```bash
-cd retro/public
-python3 -m http.server 8000
-```
-
 <h2>🕹 Games Included</h2>
 
 - ✅ Tetris — complete and playable
