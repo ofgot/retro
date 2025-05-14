@@ -8,6 +8,7 @@ This project was created as part of a web technologies course and demonstrates m
 - OOP with prototype-based inheritance
 - Media and audio controls
 - Responsive design with CSS
+<h2>Some pieces:</h2>
 
 <h2>🕹 Games Included</h2>
 
