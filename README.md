@@ -8,7 +8,22 @@ This project was created as part of a web technologies course and demonstrates m
 - OOP with prototype-based inheritance
 - Media and audio controls
 - Responsive design with CSS
-<h2>Some pieces:</h2>
+<h2>🎮 Screenshots</h2>
+
+### 🏁 Main Menu
+<img width="579" alt="Screenshot 2025-05-14 at 11 34 47" src="https://github.com/user-attachments/assets/6d79ce21-8209-490d-a56d-7d3b7f2e6431" />
+
+### 🧱 Tetris Gameplay  
+<img width="579" alt="Screenshot 2025-05-14 at 11 24 47" src="https://github.com/user-attachments/assets/224fb350-8524-45bb-bd54-82df935db537" />
+
+## 🚀 Running the Project
+
+### 🐍 Use Python's Built-in HTTP Server
+
+```bash
+cd retro/public
+python3 -m http.server 8000
+```
 
 <h2>🕹 Games Included</h2>
 
