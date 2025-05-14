@@ -1,13 +1,28 @@
 <h1>🎮 Retro Games</h1>
-A browser-based collection of retro-style games built using HTML5, CSS3, and JavaScript. 
+Retro Games is a web-based collection of retro-style games inspired by classics like Tetris, Snake, Pac-Man, and Gorillas. The project focuses on demonstrating modern web development techniques while preserving a nostalgic arcade feeling.
 
-This project was created as part of a web technologies course and demonstrates modern development principles, including:
-- Canvas-based game rendering
-- Service Worker support for offline mode
-- History API usage
-- OOP with prototype-based inheritance
-- Media and audio controls
-- Responsive design with CSS
+The core of the project is a fully functional Tetris game built from scratch using HTML5 Canvas. Users can play the game directly in the browser, control it with the keyboard, toggle music, pause/resume gameplay, and enjoy a responsive layout across devices. The project also supports offline play using Service Workers and features modern JavaScript architecture including OOP with prototypes, module structure, and jQuery interaction.
+
+Planned features include additional games like Snake, Gorillas, and Pac-Man.
+<h2>📦 Technologies Used</h2>
+
+- 🔧 HTML5
+- 🎨 CSS3
+- 🧠 JavaScript
+  - ES6 Modules
+  - OOP using prototype inheritance
+  - Canvas API for 2D game rendering
+  - Event listeners for keyboard/game controls
+  - Media API (control of background music)
+  - Service Worker API for offline capabilities
+  - History API for navigation and back-button functionality
+  - jQuery for simplified DOM interactions
+- 📁 Progressive Web Features
+  - Offline caching with Service Worker
+  - Custom fallback for offline access
+  - Dynamic script loading
+  - History API
+  
 <h2>🎮 Screenshots</h2>
 
 ### 🏁 Main Menu
@@ -28,21 +43,4 @@ python3 -m http.server 8000
 <h2>🕹 Games Included</h2>
 
 - ✅ Tetris — complete and playable
-
 - 🚧 Snake, Pac-Man, Gorillas — Coming soon
-
-<h2>🛠 Features</h2>
-
-- 🎨 HTML5 Canvas rendering
-
-- 🔁 Offline support via Service Worker
-
-- ⌨️ Keyboard controls for gameplay
-
-- 🎵 Toggleable background music
-
-- ⏸ Pause/Resume and Restart functionality
-
-- 💾 Local caching of assets for offline usage
-
-- 🧭 Use of History API for navigation
