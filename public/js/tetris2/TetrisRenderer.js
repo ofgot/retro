@@ -45,6 +45,12 @@ TetrisRenderer.prototype.drawBackground = function () {
     }
 };
 
+/**
+ * Draws a given matrix (piece or field) onto the main canvas.
+ *
+ * @param {number[][]} matrix - The matrix representing blocks to draw.
+ * @param {{x: number, y: number}} offset - The top-left position where to draw the matrix.
+ */
 TetrisRenderer.prototype.drawMatrix = function (matrix, offset) {
     const ctx = this.context;
 
@@ -87,6 +93,9 @@ TetrisRenderer.prototype.drawMatrix = function (matrix, offset) {
     });
 }
 
+/**
+ * Draws a "Game Over" message on top of the canvas.
+ */
 TetrisRenderer.prototype.drawGameOver = function () {
     const ctx = this.context;
 
@@ -106,6 +115,11 @@ TetrisRenderer.prototype.drawGameOver = function () {
     ctx.fillText('Click "Restart" to play again', tileW / 2, tileH / 2 + 2);
 }
 
+/**
+ * Draws the "next" Tetris piece in a separate preview canvas.
+ *
+ * @param {number[][]} matrix - The matrix representing the next piece.
+ */
 TetrisRenderer.prototype.drawNext = function (matrix) {
     const ctx = this.nextContext;
     const canvas = ctx.canvas;

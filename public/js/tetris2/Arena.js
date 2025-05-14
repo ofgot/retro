@@ -41,7 +41,15 @@ export class Arena {
         return rowCount;
     }
 
-
+    /**
+     * Merges the player's piece into the arena matrix.
+     * This happens when a piece lands and becomes part of the static arena.
+     *
+     * @param {number[][]} matrix - The matrix representing the current falling piece.
+     * @param {Object} pos - The position of the piece in the arena.
+     * @param {number} pos.x - The x-coordinate of the piece's top-left corner.
+     * @param {number} pos.y - The y-coordinate of the piece's top-left corner.
+     */
     merge(matrix, pos) {
         console.log(pos.x, pos.y, matrix);
         matrix.forEach((row, y) => {

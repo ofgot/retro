@@ -1,4 +1,11 @@
+/**
+ * The name of the cache to use for storing static assets.
+ */
 const CACHE_NAME = 'retro-games-cache-v1';
+
+/**
+ * A list of URLs to cache for offline use.
+ */
 const urlsToCache = [
     'index.html',
     'tetris.html',
@@ -19,14 +26,16 @@ const urlsToCache = [
     'img/pacman.png',
 ];
 
-
+/**
+ * Install event handler: opens cache and adds all specified URLs.
+ */
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             return Promise.all(
                 urlsToCache.map(url => {
                     return cache.add(url).catch(err => {
-                        console.error(`❌ Failed to cache ${url}`, err);
+                        // console.error(`❌ Failed to cache ${url}`, err);
                     });
                 })
             );
@@ -34,7 +43,10 @@ self.addEventListener('install', event => {
     );
 });
 
-
+/**
+ * Fetch event handler: serves files from cache, falls back to network,
+ * and displays cached index.html if offline and document was requested.
+ */
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(response => {

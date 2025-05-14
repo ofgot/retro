@@ -1,5 +1,9 @@
 import {collide} from "./Utils.js";
 
+/**
+ * Represents the main Tetris game logic controller.
+ * Manages player interaction, game loop, scoring, levels, and rendering.
+ */
 export class Game {
     constructor(renderer, player, arena) {
         this.renderer = renderer;
@@ -23,12 +27,19 @@ export class Game {
         this.isPaused = false;
     }
 
+    /**
+     * Initializes and starts the game loop.
+     */
     start() {
         this.player.reset(this.startX);
         this.bindControls();
         requestAnimationFrame(this.update.bind(this));
     }
 
+    /**
+     * Updates the game logic each frame (drop timing, collision, etc.).
+     * @param {number} time - The timestamp of the frame.
+     */
     update(time = 0) {
         if (this.isPaused){
             return;
@@ -67,7 +78,9 @@ export class Game {
         requestAnimationFrame(this.update.bind(this));
     }
 
-
+    /**
+     * Draws the current game state using the renderer.
+     */
     draw() {
         this.renderer.drawBackground();
         this.renderer.drawMatrix(this.arena.matrix, { x: 0, y: 0 });
@@ -75,7 +88,9 @@ export class Game {
         this.renderer.drawNext(this.player.nextMatrix);
     }
 
-
+    /**
+     * Sets up event listeners for keyboard and button controls.
+     */
     bindControls() {
         document.addEventListener('keydown', event => {
             if (event.key === 'a' || event.key === 'ArrowLeft') {
@@ -130,6 +145,10 @@ export class Game {
         }
     }
 
+    /**
+     * Rotates the player's piece and adjusts position to avoid collision.
+     * @param {number} dir - Direction of rotation: 1 for clockwise, -1 for counter-clockwise.
+     */
     rotatePlayer(dir) {
         const originalPos = this.player.pos.x;
         let offset = 1;
@@ -148,6 +167,11 @@ export class Game {
         }
     }
 
+    /**
+     * Rotates a matrix in-place by transposing and reversing it.
+     * @param {number[][]} matrix - The matrix to rotate.
+     * @param {number} dir - Direction of rotation.
+     */
     rotateMatrix(matrix, dir) {
         for (let y = 0; y < matrix.length; ++y) {
             for (let x = 0; x < y; ++x) {
@@ -162,7 +186,10 @@ export class Game {
         }
     }
 
-
+    /**
+     * Moves the player piece left or right if no collision occurs.
+     * @param {number} dir - Direction to move (-1 left, 1 right).
+     */
     movePlayer(dir) {
         this.player.pos.x += dir;
 
@@ -171,6 +198,10 @@ export class Game {
         }
     }
 
+    /**
+     * Updates the player's score, lines cleared, and level.
+     * @param {number} linesCleared - The number of lines cleared in one move.
+     */
     updateScore(linesCleared) {
         const pointsPerLine = [0, 40, 100, 300, 1200];
         this.score += pointsPerLine[linesCleared] * this.level;
@@ -181,16 +212,25 @@ export class Game {
         this.updateUI();
     }
 
+    /**
+     * Updates the on-screen UI for score, level, and lines.
+     */
     updateUI() {
         document.getElementById('score').textContent = this.score;
         document.getElementById('lines').textContent = this.lines;
         document.getElementById('level').textContent = this.level;
     }
 
+    /**
+     * Adjusts the drop interval based on the current level.
+     */
     updateSpeed() {
         this.dropInterval = Math.max(10, 1000 - (this.level - 1) * 100);
     }
 
+    /**
+     * Resets the game state to initial values and restarts the loop.
+     */
     restart() {
         this.arena.clear();
         this.score = 0;
@@ -204,6 +244,4 @@ export class Game {
         this.player.reset(this.startX);
         requestAnimationFrame(this.update.bind(this));
     }
-
-
 }

@@ -1,5 +1,11 @@
+// List of games that are not yet available
 const gamesComingSoon = ['gorillas', 'pacman', 'snake'];
 
+/**
+ * Iterate over all "play" buttons and set appropriate behavior.
+ * - For unavailable games: disable on hover and show "SOON".
+ * - For available games: navigate to the corresponding game page.
+ */
 $('.play-button').each(function () {
     const game = $(this).data('game');
 

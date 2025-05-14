@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Retro Games</title>
-    <link rel="stylesheet" type="text/css" href="stylesheet/style.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -61,16 +61,16 @@
     <!--FOOTER-->
 </div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="js/index.js"></script>
 <script>src="js/service-worker.js"</script>
+<script src="js/index.js"></script>
 <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
             .then(reg => {
-                console.log('✅ Service Worker registered:', reg);
+                // console.log('✅ Service Worker registered:', reg);
             })
             .catch(err => {
-                console.error('❌ Service Worker registration failed:', err);
+                // console.error('❌ Service Worker registration failed:', err);
             });
     }
 </script>
