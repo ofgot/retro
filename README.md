@@ -22,7 +22,6 @@ python3 -m http.server 8000
 ### 🧱 Tetris Gameplay  
 <img src="https://github.com/user-attachments/assets/224fb350-8524-45bb-bd54-82df935db537" />
 
-
 <h2>📦 Technologies Used</h2>
 
 - 🔧 HTML5
@@ -41,6 +40,9 @@ python3 -m http.server 8000
   - Custom fallback for offline access
   - Dynamic script loading
   - History API
+ 
+<h2>Object Oriented Design</h2>
+<img src="https://github.com/user-attachments/assets/1be96df7-527f-44d1-a29f-564596766c3d" />
   
 <h2>🕹 Games Included</h2>
 
