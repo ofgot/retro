@@ -6,8 +6,6 @@
     <link rel="stylesheet" type="text/css" href="stylesheet/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script>src="js/service-worker.js"</script>
-
 </head>
 <body>
 <div class="container">
@@ -17,7 +15,6 @@
         <h1 class="logo">Retro Games</h1>
         <nav class="menu">
             <a href="index.html">Home</a>
-            <a href="#">Results</a>
         </nav>
     </header>
     <!--HEADER-->
@@ -59,14 +56,16 @@
 
     <!--FOOTER-->
     <footer>
-
+        <p>&copy; 2025 Retro Games</p>
     </footer>
     <!--FOOTER-->
 </div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="js/index.js"></script>
+<script>src="js/service-worker.js"</script>
 <script>
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/retro/public/service-worker.js')
+        navigator.serviceWorker.register('service-worker.js')
             .then(reg => {
                 console.log('✅ Service Worker registered:', reg);
             })

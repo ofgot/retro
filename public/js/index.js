@@ -1,24 +1,20 @@
 const gamesComingSoon = ['gorillas', 'pacman', 'snake'];
 
-document.querySelectorAll('.play-button').forEach((button) => {
-    button.addEventListener('click', () => {
-        const game = button.dataset.game;
-        window.location.href = `${game}.html`;
-    });
-});
-
-document.querySelectorAll('.play-button').forEach((button) => {
-    const game = button.dataset.game;
+$('.play-button').each(function () {
+    const game = $(this).data('game');
 
     if (gamesComingSoon.includes(game)) {
+        $(this).on('mouseenter', function () {
+            $(this).text('SOON').prop('disabled', true);
+        });
 
-      button.addEventListener('mouseenter', () => {
-        button.textContent = 'SOON';
-        button.disabled = true;
-      });
-
-      button.addEventListener('mouseleave', () => {
-        button.textContent = 'PLAY';
-      });
+        $(this).on('mouseleave', function () {
+            $(this).text('PLAY').prop('disabled', false);
+        });
+    } else {
+        $(this).on('click', function () {
+            window.location.href = `${game}.html`;
+        });
     }
 });
+
