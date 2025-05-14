@@ -26,10 +26,10 @@ Planned features include additional games like Snake, Gorillas, and Pac-Man.
 <h2>🎮 Screenshots</h2>
 
 ### 🏁 Main Menu
-<img width="579" alt="Screenshot 2025-05-14 at 11 34 47" src="https://github.com/user-attachments/assets/6d79ce21-8209-490d-a56d-7d3b7f2e6431" />
+<img src="https://github.com/user-attachments/assets/6d79ce21-8209-490d-a56d-7d3b7f2e6431" />
 
 ### 🧱 Tetris Gameplay  
-<img width="579" alt="Screenshot 2025-05-14 at 11 24 47" src="https://github.com/user-attachments/assets/224fb350-8524-45bb-bd54-82df935db537" />
+<img src="https://github.com/user-attachments/assets/224fb350-8524-45bb-bd54-82df935db537" />
 
 ## 🚀 Running the Project
 
